@@ -2,3 +2,5 @@
 .classpath
 build/
 .settings/
+
+/target/
