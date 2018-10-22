@@ -17,6 +17,7 @@ import sun.misc.BASE64Encoder;
  * @author zhangkaiyong
  * @date 2018年9月20日 14:15:24
  */
+@SuppressWarnings("restriction")
 public class Base64Util {
 
 	/**
