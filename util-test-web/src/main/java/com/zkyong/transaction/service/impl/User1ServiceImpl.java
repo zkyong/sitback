@@ -31,4 +31,9 @@ public class User1ServiceImpl implements User1Service {
 	public void addNested(User1 user) {
 		user1Mapper.insert(user);
 	}
+	
+	@Override
+	public void noTransactional(User1 user) {
+		user1Mapper.insert(user);
+	}
 }

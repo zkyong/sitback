@@ -52,4 +52,15 @@ public class User2ServiceImpl implements User2Service {
 		user2Mapper.insert(user);
 		throw new RuntimeException();
 	}
+	
+	@Override
+	public void noTransactional(User2 user) {
+		user2Mapper.insert(user);
+	}
+
+	@Override
+	public void noTransactionalException(User2 user) {
+		user2Mapper.insert(user);
+		throw new RuntimeException();
+	}
 }

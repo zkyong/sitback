@@ -14,4 +14,8 @@ public interface User2Service {
 	public void addNested(User2 user);
 
 	public void addNestedException(User2 user);
+
+	public void noTransactional(User2 user);
+	
+	public void noTransactionalException(User2 user);
 }
