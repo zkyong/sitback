@@ -1,5 +1,9 @@
+# Current Project
+.idea
+.classpath
 .project
 .settings/
+*.log
 bin/
-.classpath
-/target/
+target/
+logs/
