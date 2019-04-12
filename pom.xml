@@ -145,15 +145,15 @@
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/com.caucho/hessian -->
 			<dependency>
-			    <groupId>com.caucho</groupId>
-			    <artifactId>hessian</artifactId>
-			    <version>4.0.38</version>
+				<groupId>com.caucho</groupId>
+				<artifactId>hessian</artifactId>
+				<version>4.0.38</version>
 			</dependency>
 			<!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
 			<dependency>
-			    <groupId>net.sourceforge.tess4j</groupId>
-			    <artifactId>tess4j</artifactId>
-			    <version>3.4.0</version>
+				<groupId>net.sourceforge.tess4j</groupId>
+				<artifactId>tess4j</artifactId>
+				<version>3.4.0</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
