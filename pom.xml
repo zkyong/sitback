@@ -160,8 +160,11 @@
 
 	<!-- manage modules -->
 	<modules>
+		<module>demo-common</module>
 		<module>demo-util</module>
+		<module>demo-model</module>
 		<module>demo-web-home</module>
+		<module>demo-test</module>
 	</modules>
 
 	<!-- manage plugins -->
