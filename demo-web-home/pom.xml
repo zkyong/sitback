@@ -12,13 +12,21 @@
 	<packaging>war</packaging>
 
 	<dependencies>
+		<!-- Local dependency -->
+		<dependency>
+			<groupId>com.zkyong.demo</groupId>
+			<artifactId>demo-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.zkyong.demo</groupId>
+			<artifactId>demo-util</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.zkyong.demo</groupId>
 			<artifactId>demo-service-user</artifactId>
-			<version>0.0.1</version>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+		<!-- springframework -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>

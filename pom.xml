@@ -7,179 +7,6 @@
 	<version>0.0.1</version>
 	<packaging>pom</packaging>
 
-	<!-- manage the version of repostitory -->
-	<properties>
-		<spring.version>5.1.0.RELEASE</spring.version>
-	</properties>
-
-	<!-- manage repostitories -->
-	<dependencyManagement>
-		<dependencies>
-			<!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
-			<dependency>
-				<groupId>com.thoughtworks.xstream</groupId>
-				<artifactId>xstream</artifactId>
-				<version>1.4.7</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
-			<dependency>
-				<groupId>dom4j</groupId>
-				<artifactId>dom4j</artifactId>
-				<version>1.6.1</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
-			<dependency>
-				<groupId>net.sourceforge.jexcelapi</groupId>
-				<artifactId>jxl</artifactId>
-				<version>2.6.10</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/xmlpull/xmlpull -->
-			<dependency>
-				<groupId>xmlpull</groupId>
-				<artifactId>xmlpull</artifactId>
-				<version>1.1.3.1</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-			<dependency>
-				<groupId>mysql</groupId>
-				<artifactId>mysql-connector-java</artifactId>
-				<version>5.1.34</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/com.belerweb/pinyin4j -->
-			<dependency>
-				<groupId>com.belerweb</groupId>
-				<artifactId>pinyin4j</artifactId>
-				<version>2.5.1</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-context</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-web</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-tx</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-jdbc</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-aop</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.springframework/spring-aspects -->
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-aspects</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
-			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-test</artifactId>
-				<version>${spring.version}</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
-			<dependency>
-				<groupId>org.mybatis</groupId>
-				<artifactId>mybatis</artifactId>
-				<version>3.4.6</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
-			<dependency>
-				<groupId>org.mybatis</groupId>
-				<artifactId>mybatis-spring</artifactId>
-				<version>1.3.2</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/junit/junit -->
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.12</version>
-				<scope>test</scope>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
-			<dependency>
-				<groupId>org.mockito</groupId>
-				<artifactId>mockito-all</artifactId>
-				<version>1.10.19</version>
-				<scope>test</scope>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
-			<dependency>
-				<groupId>com.mchange</groupId>
-				<artifactId>c3p0</artifactId>
-				<version>0.9.5.2</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/tk.mybatis/mapper -->
-			<dependency>
-				<groupId>tk.mybatis</groupId>
-				<artifactId>mapper</artifactId>
-				<version>3.4.6</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-api</artifactId>
-				<version>1.7.25</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-log4j12</artifactId>
-				<version>1.7.25</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
-			<dependency>
-				<groupId>javax.servlet</groupId>
-				<artifactId>javax.servlet-api</artifactId>
-				<version>3.1.0</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/com.caucho/hessian -->
-			<dependency>
-				<groupId>com.caucho</groupId>
-				<artifactId>hessian</artifactId>
-				<version>4.0.38</version>
-			</dependency>
-			<!-- https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j -->
-			<dependency>
-				<groupId>net.sourceforge.tess4j</groupId>
-				<artifactId>tess4j</artifactId>
-				<version>3.4.0</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.jdom</groupId>
-			    <artifactId>jdom2</artifactId>
-			    <version>2.0.6</version>
-			</dependency>
-			<dependency>
-			    <groupId>jaxen</groupId>
-			    <artifactId>jaxen</artifactId>
-			    <version>1.1.1</version>
-	            <exclusions>
-	                <exclusion>
-	                    <artifactId>icu4j</artifactId>
-	                    <groupId>com.ibm.icu</groupId>
-	                </exclusion>
-	            </exclusions>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<!-- manage modules -->
 	<modules>
 		<module>demo-common</module>
@@ -188,6 +15,209 @@
 		<module>demo-web-home</module>
 		<module>demo-test</module>
 	</modules>
+
+	<!-- manage the version of repostitory -->
+	<properties>
+		<local.version>0.0.1</local.version>
+		<spring.version>5.1.0.RELEASE</spring.version>
+		<xmlpull.version>1.1.3.1</xmlpull.version>
+		<xstream.version>1.4.7</xstream.version>
+		<dom4j.version>1.6.1</dom4j.version>
+		<jdom2.version>2.0.6</jdom2.version>
+		<jaxen.version>1.1.1</jaxen.version>
+		<jxl.version>2.6.10</jxl.version>
+		<pinyin4j.version>2.5.1</pinyin4j.version>
+		<mysql-connector-java.version>5.1.34</mysql-connector-java.version>
+		<c3p0.version>0.9.1.2</c3p0.version>
+		<mybatis.version>3.4.6</mybatis.version>
+		<mybatis-spring.version>1.3.2</mybatis-spring.version>
+		<slf4j.version>1.7.25</slf4j.version>
+		<servlet-api.version>3.1.0</servlet-api.version>
+		<hessian.version>4.0.38</hessian.version>
+		<tess4j.version>3.4.0</tess4j.version>
+		<junit.version>4.12</junit.version>
+		<commons-codec.version>1.10</commons-codec.version>
+	</properties>
+
+	<!-- manage repostitories -->
+	<dependencyManagement>
+		<dependencies>
+			<!-- manage module`s version -->
+			<dependency>
+				<groupId>com.zkyong.demo</groupId>
+				<artifactId>demo-common</artifactId>
+				<version>${local.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.zkyong.demo</groupId>
+				<artifactId>demo-util</artifactId>
+				<version>${local.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.zkyong.demo</groupId>
+				<artifactId>demo-service-user</artifactId>
+				<version>${local.version}</version>
+			</dependency>
+
+			<!-- springframework -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aspects</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-jdbc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+
+			<!-- mybatis -->
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>${mybatis-spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>tk.mybatis</groupId>
+				<artifactId>mapper</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+
+			<!-- 数据库相关 -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql-connector-java.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>c3p0</groupId>
+				<artifactId>c3p0</artifactId>
+				<version>${c3p0.version}</version>
+			</dependency>
+
+			<!-- 日志处理 -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+
+			<!-- 测试 -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- XML解析 -->
+			<dependency>
+				<groupId>xmlpull</groupId>
+				<artifactId>xmlpull</artifactId>
+				<version>${xmlpull.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.thoughtworks.xstream</groupId>
+				<artifactId>xstream</artifactId>
+				<version>${xstream.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>dom4j</groupId>
+				<artifactId>dom4j</artifactId>
+				<version>${dom4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jdom</groupId>
+				<artifactId>jdom2</artifactId>
+				<version>${jdom2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>jaxen</groupId>
+				<artifactId>jaxen</artifactId>
+				<version>${jaxen.version}</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>icu4j</artifactId>
+						<groupId>com.ibm.icu</groupId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<!-- Excel处理 -->
+			<dependency>
+				<groupId>net.sourceforge.jexcelapi</groupId>
+				<artifactId>jxl</artifactId>
+				<version>${jxl.version}</version>
+			</dependency>
+
+			<!-- 拼音处理 -->
+			<dependency>
+				<groupId>com.belerweb</groupId>
+				<artifactId>pinyin4j</artifactId>
+				<version>${pinyin4j.version}</version>
+			</dependency>
+
+			<!-- tess4j -->
+			<dependency>
+				<groupId>net.sourceforge.tess4j</groupId>
+				<artifactId>tess4j</artifactId>
+				<version>${tess4j.version}</version>
+			</dependency>
+			<!-- servlet-api -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>${servlet-api.version}</version>
+			</dependency>
+			<!-- hessian -->
+			<dependency>
+				<groupId>com.caucho</groupId>
+				<artifactId>hessian</artifactId>
+				<version>${hessian.version}</version>
+			</dependency>
+			<!-- commons-codec -->
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>${commons-codec.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<!-- manage plugins -->
 	<build>

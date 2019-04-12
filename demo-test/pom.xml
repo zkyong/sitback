@@ -12,19 +12,27 @@
 	<packaging>jar</packaging>
 
 	<dependencies>
+		<!-- Local dependency -->
+		<dependency>
+			<groupId>com.zkyong.demo</groupId>
+			<artifactId>demo-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.zkyong.demo</groupId>
+			<artifactId>demo-util</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.zkyong.demo</groupId>
 			<artifactId>demo-service-user</artifactId>
-			<version>0.0.1</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<!-- junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+		<!-- springframework -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
