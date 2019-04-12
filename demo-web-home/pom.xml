@@ -12,6 +12,12 @@
 	<packaging>war</packaging>
 
 	<dependencies>
+		<dependency>
+			<groupId>com.zkyong.demo</groupId>
+			<artifactId>demo-model</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+	
 		<!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
 		<dependency>
 			<groupId>com.thoughtworks.xstream</groupId>
