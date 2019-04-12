@@ -14,35 +14,20 @@
 	<dependencies>
 		<dependency>
 			<groupId>com.zkyong.demo</groupId>
-			<artifactId>demo-common</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.zkyong.demo</groupId>
-			<artifactId>demo-util</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.zkyong.demo</groupId>
-			<artifactId>demo-model</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.zkyong.demo</groupId>
-			<artifactId>demo-web-home</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.zkyong.demo</groupId>
 			<artifactId>demo-service-user</artifactId>
 			<version>0.0.1</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
 		</dependency>
 	</dependencies>
 </project>

@@ -34,9 +34,10 @@ import java.util.regex.Pattern;
 
 /**
  * XML解析工具类
- *
- * @author wb-zky515266
- * @version $Id: XmlUtils.java, v 0.1 2019年02月14日 3:32 PM wb-zky515266 Exp $
+ * 
+ * @author zkyong
+ * @version v 0.1 
+ * @date 2019年4月12日 上午11:51:49
  */
 public class XmlUtils {
 

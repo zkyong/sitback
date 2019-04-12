@@ -32,7 +32,7 @@ import com.zkyong.demo.string.StringUtil;
 /**
  * 文件操作工具类
  * 
- * @author wb-zky515266
+ * @author zkyong
  * @version v 0.1 
  * @date 2019年4月12日 上午11:27:53
  */

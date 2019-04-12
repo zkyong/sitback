@@ -184,7 +184,6 @@
 	<modules>
 		<module>demo-common</module>
 		<module>demo-util</module>
-		<module>demo-model</module>
 		<module>demo-service-user</module>
 		<module>demo-web-home</module>
 		<module>demo-test</module>

@@ -1,25 +1,24 @@
-package com.zkyong.demo.investigate.model;
+package com.zkyong.demo.vo;
 
-import javax.persistence.Column;
-import javax.persistence.Table;
+import java.util.List;
 
 /**
- * 问卷调查题库题目表
+ * 问卷调查题库题目(含选项) 视图层类
  * 
  * @author administrator
- * @date 2018年10月16日 12:13:21
+ * @date 2018年10月16日 13:00:58
  */
-@Table(name = "investigate_question")
-public class InvestigateQuestion {
+public class RiskQuestionOptionsVo {
 	/** 题目ID */
 	private Integer id;
 	/** 题目序号 */
-	@Column(name = "question_index")
 	private String questionIndex;
 	/** 题目内容 */
 	private String content;
 	/** 题目状态 */
 	private Integer status;
+	/** 选项列表 */
+	private List<RiskOptionVo> options;
 
 	public Integer getId() {
 		return id;
@@ -51,5 +50,13 @@ public class InvestigateQuestion {
 
 	public void setStatus(Integer status) {
 		this.status = status;
+	}
+
+	public List<RiskOptionVo> getOptions() {
+		return options;
+	}
+
+	public void setOptions(List<RiskOptionVo> options) {
+		this.options = options;
 	}
 }
