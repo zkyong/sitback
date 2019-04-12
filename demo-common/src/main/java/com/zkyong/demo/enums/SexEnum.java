@@ -5,7 +5,7 @@ package com.zkyong.demo.enums;
  * 
  * @author zkyong
  * @version v 0.1 
- * @date 2019年4月12日 上午11:50:41
+ * @date 2019年04月12日 14:51:37
  */
 public enum SexEnum {
                      /** 性别-男 */
@@ -30,12 +30,12 @@ public enum SexEnum {
      * 根据code查找枚举
      * 
      * @param code
-     * @return TaskStatusEnum
+     * @return SexEnum
      */
     public static SexEnum getByCode(Integer code) {
-        for (SexEnum result : values()) {
-            if (result.getCode().intValue() == code) {
-                return result;
+        for (SexEnum value : values()) {
+            if (value.getCode().intValue() == code) {
+                return value;
             }
         }
         return null;

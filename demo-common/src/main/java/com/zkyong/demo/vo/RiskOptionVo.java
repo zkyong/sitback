@@ -1,10 +1,11 @@
 package com.zkyong.demo.vo;
 
 /**
- * 问卷调查题库题目选项 视图层类
+ * 风险评估题库题目选项 视图类
  * 
- * @author administrator
- * @date 2018年10月16日 13:00:36
+ * @author zkyong
+ * @version v 0.1 
+ * @date 2019年04月12日 14:54:12
  */
 public class RiskOptionVo {
     /** 选项ID */

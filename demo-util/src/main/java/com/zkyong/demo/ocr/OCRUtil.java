@@ -5,6 +5,14 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+
+/**
+ * OCR处理工具类
+ * 
+ * @author zkyong
+ * @version v 0.1 
+ * @date 2019年04月12日 15:19:27
+ */
 public class OCRUtil {
 
     // OCR的都是命令方式调用

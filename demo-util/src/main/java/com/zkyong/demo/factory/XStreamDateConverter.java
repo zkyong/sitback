@@ -8,8 +8,10 @@ import com.zkyong.demo.exception.DateFormatException;
 
 /**
  * 实现 XStream格式化时间的接口
+ * 
  * @author zkyong
- * @date 2017年9月26日 13:52:28
+ * @version v 0.1 
+ * @date 2019年04月12日 15:17:57
  */
 public class XStreamDateConverter implements SingleValueConverter {
 

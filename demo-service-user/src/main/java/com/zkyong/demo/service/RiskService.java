@@ -7,14 +7,14 @@ import com.zkyong.demo.vo.RiskOptionVo;
 import com.zkyong.demo.vo.RiskQuestionOptionsVo;
 
 /**
- * 问卷调查service接口
+ * 风险评估Service接口
  * 
  * @author administrator
  * @date 2018年10月16日 14:45:05
  */
 public interface RiskService {
 	/**
-	 * 获取问卷调查题库
+	 * 获取风险评估题库
 	 * 
 	 * @author administrator
 	 * @date 2018年10月16日 14:47:47
@@ -23,7 +23,7 @@ public interface RiskService {
 	public List<RiskQuestionOptionsVo> selectQuestionOptions();
 
 	/**
-	 * 查询用户问卷调查记录
+	 * 查询用户风险评估记录
 	 * 
 	 * @param userId 用户ID
 	 * @author administrator
@@ -33,7 +33,7 @@ public interface RiskService {
 	public List<RiskDetail> selectInvestigateDetailByUser(Integer userId);
 
 	/**
-	 * 插入用户问卷调查记录
+	 * 插入用户风险评估记录
 	 * 
 	 * @param userId  用户ID
 	 * @param options 待插入记录

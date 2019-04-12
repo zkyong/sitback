@@ -13,6 +13,7 @@ import java.util.Map.Entry;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.zkyong.demo.date.DateUtil;
 import com.zkyong.demo.exception.ExcelException;
 
 import jxl.Cell;
@@ -23,18 +24,17 @@ import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 
 /**
- * @Description Excel导入导出工具类<BR>
- * @author zkyong<BR>
- * @date  2017年9月30日 11:45:53<BR>
- * @Version : 1.0.0<BR>
+ * Excel导入导出工具类
+ * 
+ * @author zkyong
+ * @version v 0.1 
+ * @date 2019年04月12日 15:11:19
  */
 public class ExcelUitl {
-    /** 格式化时间：yyyyMMddhhmmss */
-    private static SimpleDateFormat FORMAT_DATE_YMDHMS = new SimpleDateFormat("yyyyMMddhhmmss");
 
     /**
-     * @MethodName : listToExcel<BR>
-     * @Description : 将List的数据转换为Execel表导出到本地文件系统<BR>
+     * 将List的数据转换为Execel表导出到本地文件系统<BR>
+     * 
      * @param list 数据源<BR>
      * @param fieldMap
      *          类的属性和Excel的列名对应关系。<BR>
@@ -90,8 +90,8 @@ public class ExcelUitl {
     }
 
     /**
-     * @MethodName : listToExcel<BR>
-     * @Description : 将List的数据转换为Execel表导出到本地文件系统,工作表最大记录数为Excel允许的最大值65536(除去表头65535)<BR>
+     * 将List的数据转换为Execel表导出到本地文件系统,工作表最大记录数为Excel允许的最大值65536(除去表头65535)<BR>
+     * 
      * @param list 数据源<BR>
      * @param fieldMap 类的属性(key)和Excel的列名(value)对应关系 <BR>
      * @param out 输出流<BR>
@@ -103,8 +103,8 @@ public class ExcelUitl {
     }
 
     /**
-     * @MethodName : listToExcel<BR>
-     * @Description : 将List的数据转换为Execel表导出到浏览器<BR>
+     * 将List的数据转换为Execel表导出到浏览器<BR>
+     * 
      * @param list 数据源<BR>
      * @param fieldMap 类的属性和Excel的列名对应关系 <BR>
      * @param sheetSize 每个工作表中最大记录数<BR>
@@ -116,7 +116,7 @@ public class ExcelUitl {
                                        HttpServletResponse response) throws ExcelException {
 
         // 设置默认文件名为当前时间：年月日时分秒  
-        String fileName = FORMAT_DATE_YMDHMS.format(new Date()).toString();
+        String fileName = DateUtil.date2StringYMDHMSUnsigned(new Date());
 
         // 设置response头信息  
         response.reset();
@@ -138,8 +138,8 @@ public class ExcelUitl {
     }
 
     /**
-     * @MethodName : listToExcel
-     * @Description : 将List的数据转换为Execel表导出到浏览器,工作表最大记录数为Excel允许的最大值65536(除去表头65535)<BR>
+     * 将List的数据转换为Execel表导出到浏览器,工作表最大记录数为Excel允许的最大值65536(除去表头65535)<BR>
+     * 
      * @param list 数据源<BR>
      * @param fieldMap 类的属性和Excel的列名对应关系 <BR>
      * @param response 响应对象<BR>
@@ -152,8 +152,8 @@ public class ExcelUitl {
     }
 
     /**
-     * @MethodName : excelToList<BR>
-     * @Description : 将Excel中的数据转化为List<BR>
+     * 将Excel中的数据转化为List<BR>
+     * 
      * @param in : 输入流<BR>
      * @param sheetName : 工作表名称<BR>
      * @param entityClass : List中对象的类型
@@ -274,10 +274,9 @@ public class ExcelUitl {
     }
 
     /* <---------------------------------辅助的私有方法---------------------------------> */
-
     /** 
-     * @MethodName : getFieldByName<BR>
-     * @Description : 根据字段名获取字段<BR>
+     * 根据字段名获取字段<BR>
+     * 
      * @param fieldName : 字段名<BR>
      * @param clazz : 包含该字段的类<BR>
      * @return : 字段<BR>
@@ -304,9 +303,8 @@ public class ExcelUitl {
     }
 
     /**
-     * @MethodName : getFieldValueByNameSequence<BR>
-     * @Description : 根据带路径或不带路径的属性名获取属性值,即接受简单属性名,如userName等;
-     *                又接受带路径的属性名,如student.department.name等<BR>
+     * 根据带路径或不带路径的属性名获取属性值,即接受简单属性名,如userName等; 又接受带路径的属性名,如student.department.name等<BR>
+     * 
      * @param fieldNameSequence 带路径的属性名或简单属性名<BR>
      * @param o : 对象<BR>
      * @return : 属性值<BR>
@@ -333,8 +331,8 @@ public class ExcelUitl {
     }
 
     /** 
-     * @MethodName : setFieldValueByName<BR>
-     * @Description : 根据字段名给对象的字段赋值<BR>
+     * 根据字段名给对象的字段赋值<BR>
+     * 
      * @param fieldName : 字段名<BR>
      * @param fieldValue : 字段值<BR>
      * @param o : 对象<BR>
@@ -392,8 +390,8 @@ public class ExcelUitl {
     }
 
     /** 
-     * @MethodName : getFieldValueByName 
-     * @Description : 根据字段名获取字段值 
+     * 根据字段名获取字段值 
+     * 
      * @param fieldName : 字段名 
      * @param o : 对象 
      * @return : 字段值 
@@ -413,8 +411,8 @@ public class ExcelUitl {
     }
 
     /** 
-     * @MethodName  : setColumnAutoSize 
-     * @Description : 设置工作表自动列宽和首行加粗 
+     * 设置工作表自动列宽和首行加粗 
+     * 
      * @param ws 
      */
     private static void setColumnAutoSize(WritableSheet ws, int extraWith) {
@@ -434,8 +432,8 @@ public class ExcelUitl {
     }
 
     /** 
-     * @MethodName : fillSheet 
-     * @Description : 向工作表中填充数据 
+     * 向工作表中填充数据 
+     * 
      * @param sheet : 工作表  
      * @param list : 数据源 
      * @param fieldMap : 中英文字段对应关系的Map 

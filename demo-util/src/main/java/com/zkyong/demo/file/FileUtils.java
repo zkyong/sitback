@@ -34,7 +34,7 @@ import com.zkyong.demo.string.StringUtil;
  * 
  * @author zkyong
  * @version v 0.1 
- * @date 2019年4月12日 上午11:27:53
+ * @date 2019年04月12日 15:18:20
  */
 public class FileUtils {
 

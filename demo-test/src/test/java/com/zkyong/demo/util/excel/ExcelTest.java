@@ -15,21 +15,22 @@ import com.zkyong.demo.excel.ExcelUitl;
 import com.zkyong.demo.exception.ExcelException;
 
 /**
- * ExcelUtil Excel处理工具<BR>
- * @author zkyong<BR>
- * @date 2018年2月6日 11:05:54<BR>
- * @version 1.0.0<BR>
+ * ExcelUtil 测试类
+ * 
+ * @author zkyong
+ * @version v 0.1 
+ * @date 2019年04月12日 15:29:56
  */
 public class ExcelTest {
 
     public static void main(String[] args) {
-        String fullPath = "C:/Users/zkyong/Desktop/测试表格.xls " ; 
+        String fullPath = "C:/Users/zkyong/Desktop/测试表格.xls ";
         listToExcelTest(fullPath);
-        System.out.println(","+excelToListTest(fullPath));
+        System.out.println("," + excelToListTest(fullPath));
         //String str = "college";
         //System.out.println(str.split("\\."));
     }
-    
+
     /**
      * 将对象list转换为Excel表格<BR>
      * @param fullPath 全路径<BR>
@@ -37,16 +38,17 @@ public class ExcelTest {
     private static void listToExcelTest(String fullPath) {
         Student student = null;
         List<Student> list = new ArrayList<>();
-        for (int i = 0; i < 198 ; i++) {
+        for (int i = 0; i < 198; i++) {
             student = new Student();
-            student.setId("ID000"+(i+1));
-            student.setName("姓名"+(i+1));
-            student.setSex(new BigDecimal(Math.random()).setScale(0, BigDecimal.ROUND_HALF_UP).intValue());
-            student.setScore(new BigDecimal(Math.random()*50).intValue()+50);
-            student.setAge(new BigDecimal(Math.random()*3).intValue() + 15);
+            student.setId("ID000" + (i + 1));
+            student.setName("姓名" + (i + 1));
+            student.setSex(
+                new BigDecimal(Math.random()).setScale(0, BigDecimal.ROUND_HALF_UP).intValue());
+            student.setScore(new BigDecimal(Math.random() * 50).intValue() + 50);
+            student.setAge(new BigDecimal(Math.random() * 3).intValue() + 15);
             College college = new College();
-            college.setCollegeId(new BigDecimal(Math.random()*5).intValue());
-            college.setCollegeName("学院名称"+college.getCollegeId());
+            college.setCollegeId(new BigDecimal(Math.random() * 5).intValue());
+            college.setCollegeName("学院名称" + college.getCollegeId());
             School school = new School();
             school.setSchoolId("SL2010100");
             school.setSchoolName("学校名称");
@@ -55,7 +57,8 @@ public class ExcelTest {
             list.add(student);
             System.out.println(student);
         }
-        LinkedHashMap<String, String> fieldMap = new LinkedHashMap<>();;
+        LinkedHashMap<String, String> fieldMap = new LinkedHashMap<>();
+        ;
         fieldMap.put("id", "学生ID");
         fieldMap.put("name", "姓名");
         fieldMap.put("sex", "性别");
@@ -67,7 +70,7 @@ public class ExcelTest {
         fieldMap.put("college.school.schoolName", "学校名称");
         OutputStream os = null;
         try {
-            os = new  FileOutputStream(fullPath);
+            os = new FileOutputStream(fullPath);
             ExcelUitl.listToExcel(list, fieldMap, "学生表", 200, os);
         } catch (ExcelException e) {
             e.printStackTrace();
@@ -83,7 +86,7 @@ public class ExcelTest {
             }
         }
     }
-    
+
     /**
      * 将Excel表格转换为对象list<T><BR>
      * @param fullPath ȫ·��<BR>
@@ -99,13 +102,13 @@ public class ExcelTest {
         fieldMap.put("分数", "score");
         fieldMap.put("学院ID", "college.collegeId");
         fieldMap.put("学院名称", "college.collegeName");
-        fieldMap.put("学校ID","college.school.schoolId");
-        fieldMap.put("学校名称","college.school.schoolName");
-        
-        String[] uniqueFields = {"学生ID"};
+        fieldMap.put("学校ID", "college.school.schoolId");
+        fieldMap.put("学校名称", "college.school.schoolName");
+
+        String[] uniqueFields = { "学生ID" };
         try {
             in = new FileInputStream(fullPath);
-            list = ExcelUitl.excelToList(in,"学生表1",Student.class,fieldMap,uniqueFields);
+            list = ExcelUitl.excelToList(in, "学生表1", Student.class, fieldMap, uniqueFields);
         } catch (ExcelException e1) {
             e1.printStackTrace();
         } catch (FileNotFoundException e) {

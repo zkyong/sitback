@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Table;
 
 /**
- * 会员问卷调查登记明细表
+ * 会员风险评估登记明细表
  * 
  * @author administrator
  * @date 2018年10月16日 12:13:37

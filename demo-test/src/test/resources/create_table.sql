@@ -1,5 +1,5 @@
--- 问卷调查题库题目表
-create table `news_user_investigate_question`
+-- 风险评估题库题目表
+create table `risk_question`
 (
   `id`               int(11)      NOT NULL AUTO_INCREMENT COMMENT '题目ID',
   `question_index`   VARCHAR(32)  NOT NULL COMMENT '题目序号',
@@ -8,8 +8,8 @@ create table `news_user_investigate_question`
   PRIMARY KEY (`id`)
 );
 
--- 问卷调查题库选项表
-create table `news_user_investigate_option`
+-- 风险评估题库选项表
+create table `risk_option`
 (
   `id`           int(11)      NOT NULL AUTO_INCREMENT COMMENT '选项ID',
   `question_id`  int(11)      NOT NULL COMMENT '题目ID',
@@ -17,59 +17,10 @@ create table `news_user_investigate_option`
   `content`      VARCHAR(512) NOT NULL COMMENT '选项内容',
   `score`        int(4)       NOT NULL COMMENT '选项分数',
   PRIMARY KEY (`id`),
-  UNIQUE  KEY `uk_investigate_option_question_id_index` (`question_id`, `index`) USING BTREE
+  UNIQUE  KEY `uk_risk_question_id_index` (`question_id`, `index`) USING BTREE
 );
--- 用户问卷调查明细登记表
-create table `news_user_investigate_log`
-(
-  `id`          int(11) NOT NULL AUTO_INCREMENT COMMENT '明细ID',
-  `user_id`     int(11) NOT NULL COMMENT '用户ID',
-  `question_id` int(11) NOT NULL COMMENT '题目ID',
-  `option_id`   int(11) NOT NULL COMMENT '选项ID',
-  PRIMARY KEY (`id`)
-);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
------------------------------
--- 问卷调查题库题目表
-create table `investigate_question`
-(
-  `id`               int(11)      NOT NULL AUTO_INCREMENT COMMENT '题目ID',
-  `question_index`   VARCHAR(32)  NOT NULL COMMENT '题目序号',
-  `content`          VARCHAR(512) NOT NULL COMMENT '题目内容',
-  `status`           int(2)       NOT NULL COMMENT '题目状态(0.禁用 1.启用)',
-  PRIMARY KEY (`id`)
-);
-
--- 问卷调查题库选项表
-create table `investigate_option`
-(
-  `id`           int(11)      NOT NULL AUTO_INCREMENT COMMENT '选项ID',
-  `question_id`  int(11)      NOT NULL COMMENT '题目ID',
-  `option_index` VARCHAR(32)  NOT NULL COMMENT '选项序号',
-  `content`      VARCHAR(512) NOT NULL COMMENT '选项内容',
-  `score`        int(4)       NOT NULL COMMENT '选项分数',
-  PRIMARY KEY (`id`),
-  UNIQUE  KEY `uk_investigate_option_question_id_index` (`question_id`, `option_index`) USING BTREE
-);
--- 用户问卷调查明细登记表
-create table `investigate_detail`
+-- 用户风险评估明细登记表
+create table `risk_detail`
 (
   `id`          int(11) NOT NULL AUTO_INCREMENT COMMENT '明细ID',
   `user_id`     int(11) NOT NULL COMMENT '用户ID',

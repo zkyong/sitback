@@ -51,8 +51,8 @@ public class RiskController {
     public void insertInvestigateLog(Integer userId, List<RiskOptionVo> options) throws Exception {
         List<RiskDetail> logs = riskService.selectInvestigateDetailByUser(userId);
         if (!CollectionUtils.isEmpty(logs)) {
-            LOGGER.info("该用户已完成过问卷调查");
-            throw new ServiceException("该用户已完成过问卷调查");
+            LOGGER.info("该用户已完成过风险评估");
+            throw new ServiceException("该用户已完成过风险评估");
         }
         riskService.insertInvestigateDetail(userId, options);
     }

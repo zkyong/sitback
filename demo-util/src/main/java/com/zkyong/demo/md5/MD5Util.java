@@ -3,10 +3,11 @@ package com.zkyong.demo.md5;
 import java.security.MessageDigest;
 
 /**
- * 采用MD5加密解密
+ * MD5加密解密工具类
  * 
- * @author tfq
- * @datetime 2011-10-13
+ * @author zkyong
+ * @version v 0.1 
+ * @date 2019年04月12日 15:19:06
  */
 public class MD5Util {
 

@@ -21,7 +21,7 @@ import com.zkyong.demo.vo.RiskOptionVo;
 import com.zkyong.demo.vo.RiskQuestionOptionsVo;
 
 /**
- * 问卷调查service 实现类
+ * 风险评估Service 实现类
  * 
  * @author administrator
  * @date 2018年10月16日 14:45:39

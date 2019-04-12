@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Table;
 
 /**
- * 问卷调查题库选项表
+ * 风险评估题库选项表
  * 
  * @author administrator
  * @date 2018年10月16日 12:13:41

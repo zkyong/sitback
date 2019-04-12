@@ -5,6 +5,13 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
+/**
+ * JS工具类
+ * 
+ * @author zkyong
+ * @version v 0.1 
+ * @date 2019年04月12日 15:18:44
+ */
 public class JSUtil {
 
     public static void invoke(String js) {

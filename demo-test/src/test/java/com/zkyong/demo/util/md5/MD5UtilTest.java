@@ -2,6 +2,13 @@ package com.zkyong.demo.util.md5;
 
 import com.zkyong.demo.md5.MD5Util;
 
+/**
+ * MD5Util测试类
+ * 
+ * @author zkyong
+ * @version v 0.1 
+ * @date 2019年04月12日 15:30:57
+ */
 public class MD5UtilTest {
 
     // 测试主函数
